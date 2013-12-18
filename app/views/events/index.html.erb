@@ -1,0 +1,21 @@
+<h1>Events Calendar</h1>
+<p>Create public events</p>
+
+<%= link_to "Post a new event", new_event_path %>
+<% end %>
+
+<table>
+  <tr>
+    <th>Event start date</th>
+    <th>Event end date</th>
+    <th>Event title</th>
+    <th>Event description</th>
+  </tr>
+<tr>
+  <% @events.each do |event| %>
+    <th><%= event.starts_at %> - <%= event.ends_at %></th><br>
+    <th><%= event.title %></th><br>
+    <th><%= event.description %></th>
+<% end %>
+</tr>
+</table>

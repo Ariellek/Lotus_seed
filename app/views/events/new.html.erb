@@ -1,0 +1,24 @@
+<h1>Welcome</h1>
+<p>Create public events</p>
+
+<%= form_for @event do |t| %>
+  <div>
+    <%= t.label :starts_at, "Event start date/time" %>
+    <%= t.text_field :starts_at %>
+  </div>
+  <div>
+    <%= t.label :ends_at, "Event end date/time" %>
+    <%= t.text_field :ends_at %>
+  </div>
+  <div>
+    <%= t.label :title, "Event name" %>
+    <%= t.text_field :title %>
+  </div>
+  <div>
+    <%= t.label :description, "Event discription" %>
+    <%= t.text_field :description %>
+  </div>
+  <div>
+    <%= t.submit %>
+  </div>
+  <% end %>

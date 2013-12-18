@@ -10,13 +10,13 @@
 
     <nav>
       <%= link_to "Home", root_path %>
-      <%= link_to "Calendar", public_calendar_path %>
+      <%= link_to "Calendar", events_path %>
       <%= link_to "Teacher Training", training_path %>
       <%= link_to "Contact Us", contact_path %>
 
       <% if current_user? %>
-        <%= link_to "Teacher Home", "" %>
-        <%= link_to "Teacher Calendar", events_path %>
+        <%= link_to "Teacher Home", public_calendar_path %>
+        <%= link_to "Teacher Calendar", new_event_path %>
       <% end %>
 
     </nav>

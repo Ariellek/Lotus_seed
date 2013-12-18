@@ -1,21 +1,11 @@
-<h1>Events Calendar</h1>
-<p>Create public events</p>
+<h1>Calendar of events</h1>
+<p>Here is a list of our current events updated by teachers daily!</p>
 
-<%= link_to "Post a new event", new_event_path %>
-<% end %>
 
-<table>
-  <tr>
-    <th>Event start date</th>
-    <th>Event end date</th>
-    <th>Event title</th>
-    <th>Event description</th>
-  </tr>
-<tr>
+<ul>
   <% @events.each do |event| %>
-    <th><%= event.starts_at %> - <%= event.ends_at %></th><br>
-    <th><%= event.title %></th><br>
-    <th><%= event.description %></th>
+    <li><%= event.starts_at %> - <%= event.ends_at %></li><br>
+    <li><%= event.title %></li><br>
+    <li><%= event.description %></li>
 <% end %>
-</tr>
-</table>
+</ul>

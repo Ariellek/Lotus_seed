@@ -1,17 +1,17 @@
-<h1>Welcome</h1>
-<p>Create public events</p>
+<h1>Teacher Calendar</h1>
+<p>Create public events for all to attend</p>
 
 <%= form_for @event do |t| %>
   <div>
-    <%= t.label :starts_at, "Event start date/time" %>
+    <%= t.label :starts_at, "Start date/time" %>
     <%= t.text_field :starts_at %>
   </div>
   <div>
-    <%= t.label :ends_at, "Event end date/time" %>
+    <%= t.label :ends_at, "End date/time" %>
     <%= t.text_field :ends_at %>
   </div>
   <div>
-    <%= t.label :title, "Event name" %>
+    <%= t.label :title, "Event title" %>
     <%= t.text_field :title %>
   </div>
   <div>
@@ -21,4 +21,4 @@
   <div>
     <%= t.submit %>
   </div>
-  <% end %>
+<% end %>

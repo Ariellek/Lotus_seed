@@ -4,11 +4,11 @@
 <%= form_for @event do |t| %>
   <div>
     <%= t.label :starts_at, "Start date/time" %>
-    <%= t.text_field :starts_at %>
+    <%= t.datetime_select :starts_at %>
   </div>
   <div>
     <%= t.label :ends_at, "End date/time" %>
-    <%= t.text_field :ends_at %>
+    <%= t.datetime_select :ends_at %>
   </div>
   <div>
     <%= t.label :title, "Event title" %>

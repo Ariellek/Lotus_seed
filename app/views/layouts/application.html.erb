@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-  <html>
+<html>
   <head>
     <title>LotusSeed</title>
-    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag "application",
+      media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application",
+      "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
 
+  <body>
     <nav>
       <%= link_to "Home", root_path %>
       <%= link_to "Calendar", events_path %>
@@ -18,20 +20,19 @@
         <%= link_to "Teacher Home", public_calendar_path %>
         <%= link_to "Teacher Calendar", new_event_path %>
       <% end %>
-
     </nav>
+
     <%= notice %>
     <%= alert %>
 
-  <% if current_user.present? %>
-    Welcome <%= current_user.name %>
-    <%= link_to 'Sign Out', logout_path %>
-  <% else %>
-    <%= link_to 'Sign In', login_path %>
-    <%= link_to 'Register', new_user_path %>
-  <% end %>
+    <% if current_user.present? %>
+      Welcome <%= current_user.name %>
+      <%= link_to 'Sign Out', logout_path %>
+    <% else %>
+      <%= link_to 'Sign In', login_path %>
+      <%= link_to 'Register', new_user_path %>
+    <% end %>
 
     <%= yield %>
-
   </body>
-  </html>
+</html>

@@ -1,11 +1,13 @@
 <h1>Calendar of events</h1>
 <p>Here is a list of our current events updated by teachers daily!</p>
 
-
 <ul>
   <% @events.each do |event| %>
-    <li><%= event.starts_at %> - <%= event.ends_at %></li><br>
-    <li><%= event.title %></li><br>
-    <li><%= event.description %></li>
-<% end %>
+    <li>
+      <%= event.starts_at.to_s(:long_ordinal) %> -
+      <%= event.ends_at.to_s(:long_ordinal) %><br>
+      <%= event.title %><br>
+      <%= event.description %>
+    </li>
+  <% end %>
 </ul>
